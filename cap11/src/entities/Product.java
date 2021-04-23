@@ -2,23 +2,23 @@ package entities;
 
 public class Product {
 	
-	private int name;
+	private String name;
 	private double price;
 	
 	public Product() {
 		
 	}
 
-	public Product(int name, double price) {		
+	public Product(String name, double price) {		
 		this.name = name;
 		this.price = price;
 	}
 
-	public int getName() {
+	public String getName() {
 		return name;
 	}
 
-	public void setName(int name) {
+	public void setName(String name) {
 		this.name = name;
 	}
 
