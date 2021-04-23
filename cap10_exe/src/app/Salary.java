@@ -68,7 +68,7 @@ public class Salary {
 			for (Employee e : list) {
 				System.out.println(e);
 			}	
-			
+			 
 		}					
 		
 		sc.close();								
