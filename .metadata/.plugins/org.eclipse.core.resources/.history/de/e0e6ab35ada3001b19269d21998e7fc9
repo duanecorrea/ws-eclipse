@@ -1,0 +1,10 @@
+package app;
+
+public class exVet1 {
+
+	public static void main(String[] args) {
+		int rooms[10];
+
+	}
+
+}

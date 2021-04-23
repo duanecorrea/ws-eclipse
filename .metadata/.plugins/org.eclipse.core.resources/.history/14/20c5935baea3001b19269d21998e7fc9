@@ -1,0 +1,42 @@
+package app;
+
+import java.util.Scanner;
+
+import entities.rent;
+
+public class exVet1 {
+
+	public static void main(String[] args) {
+		
+		int rooms[];
+		int students, room;
+		String name, email;		
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Quantidade alunos para alugar: ");
+		students = sc.nextInt();
+		
+		for(int i = 0;i < students; i++) {
+			System.out.println("Aluno:");
+			name = sc.next();
+			
+			System.out.println("E-mail:");
+			email = sc.next();
+			
+			System.out.println("Quarto:");
+			room = sc.nextInt();
+			
+			
+			
+			rooms[room] = 
+			
+			
+					
+			
+		}
+		
+		sc.close();
+
+	}
+
+}

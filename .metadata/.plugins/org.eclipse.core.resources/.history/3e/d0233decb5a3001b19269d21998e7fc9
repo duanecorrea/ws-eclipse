@@ -1,0 +1,37 @@
+package app;
+
+import java.util.Scanner;
+
+public class Salary {
+
+	public static void main(String[] args) {
+		
+		int id;
+		String name;
+		double salary;
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Funcionários:");
+		int employee = sc.nextInt();
+		
+		for(int i = 1; i <= employee; i++) {
+			System.out.println("ID:");
+			id = sc.nextInt();
+			
+			System.out.println("Name:");
+			name = sc.nextLine();
+			
+			System.out.println("Salary:");
+			salary = sc.nextDouble();
+			
+			
+		}
+		
+		
+		
+		sc.close();
+
+	}
+
+}
