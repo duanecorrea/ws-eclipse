@@ -61,12 +61,14 @@ public class ChessMatch {
 	
 	public ChessPiece performChessMove(ChessPosition sourcePosition, ChessPosition targetPosition) {
 				
-		validateSourcePosition(sourcePosition.toPosition());		
-		validateTargetPosition(sourcePosition.toPosition(), targetPosition.toPosition());
-		Piece capturedPiece = makeMove(sourcePosition.toPosition(), targetPosition.toPosition());
+		Position source = sourcePosition.toPosition();
+		Position target = targetPosition.toPosition();
+		validateSourcePosition(source);
+		validateTargetPosition(source, target);
+		Piece capturedPiece = makeMove(source, target);
 		
-		if(testCheck(currentPlayer)) {
-			undoMove(sourcePosition.toPosition(), targetPosition.toPosition(), capturedPiece);
+		if (testCheck(currentPlayer)) {
+			undoMove(source, target, capturedPiece);
 			throw new ChessException("Voce não pode se colocar em cheque");			
 		}
 		
@@ -198,17 +200,9 @@ public class ChessMatch {
 		
 	}
 	
-	private void initialSetup() {
+	private void initialSetup() {				
 		
-		placeNewPiece('h', 7, new Rook(board, Color.WHITE));
-		placeNewPiece('d', 1, new Rook(board, Color.WHITE));
-		placeNewPiece('e', 1, new King(board, Color.WHITE));
-		
-		placeNewPiece('b', 8, new King(board, Color.BLACK));
 		placeNewPiece('a', 8, new Rook(board, Color.BLACK));
-		
-		
-		/*placeNewPiece('a', 8, new Rook(board, Color.BLACK));
 		placeNewPiece('b', 8, new Knight(board, Color.BLACK));		
 		placeNewPiece('c', 8, new Bishop(board, Color.BLACK));
 		placeNewPiece('d', 8, new Queen(board, Color.BLACK));
@@ -227,9 +221,9 @@ public class ChessMatch {
 		placeNewPiece('h', 1, new Rook(board, Color.WHITE));
 		
 		for(int i = 0; i < 8; i++) {
-			placeNewPiece((char)('a' + i), 7, new Rook(board, Color.BLACK));
-			placeNewPiece((char)('a' + i), 2, new Rook(board, Color.WHITE));	
-		}*/
+			placeNewPiece((char)('a' + i), 7, new Bishop(board, Color.BLACK));
+			placeNewPiece((char)('a' + i), 2, new Bishop(board, Color.WHITE));	
+		}		
 		
 	}
 
