@@ -11,7 +11,7 @@ public class ChessPosition {
 	public ChessPosition(char column, int row) {		
 		
 		if(column < 'a' || column > 'h' || row < 1 || row > 8) {
-			throw new ChessException("Posi��o inv�lida");
+			throw new ChessException("Posição inválida");
 		}
 		
 		this.column = column;
